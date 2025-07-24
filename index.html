@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MileVolt - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; /* White background */
+            color: #374151; /* Dark gray text */
+        }
+        /* Custom styles for button animations */
+        .btn-animated {
+            transition: all 0.2s ease-in-out;
+            transform-origin: center;
+        }
+        .btn-animated:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn-animated:active {
+            transform: translateY(1px) scale(0.98);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Specific animation for menu items */
+        .nav-item-animated {
+            position: relative;
+            transition: all 0.2s ease-in-out;
+        }
+        .nav-item-animated::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #3b82f6; /* Blue-500 for underline */
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-item-animated:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile menu overlay */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 50;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu-overlay.open {
+            transform: translateX(0);
+        }
+        .mobile-menu-overlay a {
+            color: white;
+            font-size: 1.5rem;
+            padding: 1rem 0;
+            transition: color 0.2s ease-in-out;
+        }
+        .mobile-menu-overlay a:hover {
+            color: #93c5fd; /* Blue-300 for mobile menu hover */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay lg:hidden">
+        <button id="close-mobile-menu" class="absolute top-6 right-6 text-white text-3xl focus:outline-none">
+            &times;
+        </button>
+        <nav class="flex flex-col items-center space-y-6">
+            <a href="#home" class="nav-item-animated text-white hover:text-blue-400 text-2xl font-medium">Home</a>
+            <a href="#blog" class="nav-item-animated text-white hover:text-blue-400 text-2xl font-medium">Blog</a>
+            <a href="#projects" class="nav-item-animated text-white hover:text-blue-400 text-2xl font-medium">Projects</a>
+            <a href="#contact" class="nav-item-animated text-white hover:text-blue-400 text-2xl font-medium">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-4 px-6 md:px-8 lg:px-12 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo/Site Title -->
+            <a href="#" class="text-2xl font-bold text-blue-700 hover:text-blue-900 transition-colors duration-200">MileVolt</a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex space-x-8">
+                <a href="#home" class="nav-item-animated text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="#blog" class="nav-item-animated text-gray-700 hover:text-blue-600 font-medium">Blog</a>
+                <a href="#projects" class="nav-item-animated text-gray-700 hover:text-blue-600 font-medium">Projects</a>
+                <a href="#contact" class="nav-item-animated text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <div class="flex flex-col lg:flex-row max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex-grow">
+
+        <!-- Left Sidebar: Picture & Quick Info -->
+        <aside class="lg:w-1/4 lg:pr-8 mb-8 lg:mb-0">
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center lg:sticky lg:top-24">
+                <!-- Your Picture -->
+                <img src="https://placehold.co/150x150/667eea/ffffff?text=Your+Photo" alt="Your Photo" class="w-36 h-36 rounded-full mx-auto mb-4 object-cover border-4 border-blue-200 shadow-md">
+
+                <!-- Quick Info -->
+                <h2 class="text-2xl font-bold text-gray-800 mb-1">MileVolt</h2>
+                <p class="text-blue-600 font-medium mb-1">Electrical Engineering Undergraduate Student</p>
+                <p class="text-gray-500 text-sm mb-4">The University of Texas at El Paso (UTEP)</p>
+                <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                    Passionate about semiconductors, power integrity, and biomedical. I enjoy tackling challenging problems and bringing innovative electronic solutions to life.
+                </p>
+
+                <!-- Company/University Logos -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-3">Affiliations & Experience</h3>
+                    <div class="flex flex-wrap justify-center items-center gap-4">
+                        <img src="https://placehold.co/80x40/003366/ffffff?text=Siemens" alt="Siemens Logo" class="h-8 object-contain">
+                        <img src="https://placehold.co/80x40/2F2F2F/ffffff?text=Microsoft" alt="Microsoft Logo" class="h-8 object-contain">
+                        <img src="https://placehold.co/80x40/872434/ffffff?text=UTEP" alt="UTEP Logo" class="h-8 object-contain">
+                    </div>
+                </div>
+
+                <!-- CV and Social Media Buttons -->
+                <div class="flex flex-col space-y-3">
+                    <a href="your_cv.pdf" download class="btn-animated bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md flex items-center justify-center">
+                        <i class="fas fa-download mr-2"></i> Download CV
+                    </a>
+                    <a href="https://linkedin.com/in/yamilet-rocha-801425242/" target="_blank" class="btn-animated bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-lg shadow-md flex items-center justify-center">
+                        <i class="fab fa-linkedin mr-2"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com//ygarciaroc" target="_blank" class="btn-animated bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-6 rounded-lg shadow-md flex items-center justify-center">
+                        <i class="fab fa-github mr-2"></i> GitHub
+                    </a>
+                    <!-- Add more social media buttons as needed -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Content: Blog Posts & Projects -->
+        <main class="lg:w-3/4 lg:pl-8">
+            <!-- Recent News/Blog Posts Section -->
+            <section id="blog" class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-200 pb-3">Recent News & Blog Posts</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Blog Post 1 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
+                        <img src="https://placehold.co/400x200/a78bfa/ffffff?text=Blog+Post+1" alt="Blog Post Image" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">The Future of Web Development</h3>
+                            <p class="text-sm text-gray-500 mb-3">July 15, 2025</p>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Exploring the latest trends in front-end frameworks and serverless architectures...
+                            </p>
+                            <a href="#" class="btn-animated inline-block bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Blog Post 2 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
+                        <img src="https://placehold.co/400x200/818cf8/ffffff?text=Blog+Post+2" alt="Blog Post Image" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">My Journey into AI/ML</h3>
+                            <p class="text-sm text-gray-500 mb-3">June 28, 2025</p>
+                            <p class="text-gray-600 text-sm mb-4">
+                                A personal account of diving into machine learning and its practical applications...
+                            </p>
+                            <a href="#" class="btn-animated inline-block bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Add more blog posts as needed -->
+                </div>
+            </section>
+
+            <!-- Project Gallery Section -->
+            <section id="projects" class="bg-white rounded-xl shadow-lg p-6">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-200 pb-3">My Projects</h2>
+
+                <!-- Project Categories -->
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                    <button class="project-category-btn btn-animated bg-blue-100 text-blue-700 hover:bg-blue-200 font-medium py-2 px-5 rounded-full text-sm" data-category="all">All</button>
+                    <button class="project-category-btn btn-animated bg-blue-100 text-blue-700 hover:bg-blue-200 font-medium py-2 px-5 rounded-full text-sm" data-category="web-dev">Web Development</button>
+                    <button class="project-category-btn btn-animated bg-blue-100 text-blue-700 hover:bg-blue-200 font-medium py-2 px-5 rounded-full text-sm" data-category="mobile-app">Mobile Apps</button>
+                    <button class="project-category-btn btn-animated bg-blue-100 text-blue-700 hover:bg-blue-200 font-medium py-2 px-5 rounded-full text-sm" data-category="design">UI/UX Design</button>
+                    <button class="project-category-btn btn-animated bg-green-100 text-green-700 hover:bg-green-200 font-medium py-2 px-5 rounded-full text-sm" data-category="electronics-fun">Electronics (Fun)</button>
+                    <button class="project-category-btn btn-animated bg-yellow-100 text-yellow-700 hover:bg-yellow-200 font-medium py-2 px-5 rounded-full text-sm" data-category="electronics-work-research">Electronics (Work/Research)</button>
+                    <button class="project-category-btn btn-animated bg-red-100 text-red-700 hover:bg-red-200 font-medium py-2 px-5 rounded-full text-sm" data-category="internship">Internship</button>
+                </div>
+
+                <!-- Project Grid -->
+                <div id="project-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Project 1 (Web Development - Existing) -->
+                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="web-dev">
+                        <img src="https://placehold.co/400x250/6366f1/ffffff?text=Project+1" alt="Project Image" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">E-commerce Platform</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                A full-stack e-commerce solution with secure payment gateway and admin panel.
+                            </p>
+                            <span class="inline-block bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">Web Development</span>
+                            <a href="#" class="btn-animated block text-center bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md mt-2">View Project</a>
+                        </div>
+                    </div>
+                    <!-- Project 2 (Mobile App - Existing) -->
+                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="mobile-app">
+                        <img src="https://placehold.co/400x250/4f46e5/ffffff?text=Project+2" alt="Project Image" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Task Management App</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Intuitive mobile app to organize tasks, set reminders, and track progress.
+                            </p>
+                            <span class="inline-block bg-purple-100 text-purple-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">Mobile App</span>
+                            <a href="#" class="btn-animated block text-center bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md mt-2">View Project</a>
+                        </div>
+                    </div>
+                    <!-- Project 3 (UI/UX Design - Existing) -->
+                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="design">
+                        <img src="https://placehold.co/400x250/6d28d9/ffffff?text=Project+3" alt="Project Image" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Dashboard Redesign</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Revamped a complex analytics dashboard for improved usability and aesthetics.
+                            </p>
+                            <span class="inline-block bg-pink-100 text-pink-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">UI/UX Design</span>
+                            <a href="#" class="btn-animated block text-center bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md mt-2">View Project</a>
+                        </div>
+                    </div>
+                    <!-- Project 4 (Web Development - Existing) -->
+                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="web-dev">
+                        <img src="https://placehold.co/400x250/4338ca/ffffff?text=Project+4" alt="Project Image" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Personal Blog Site</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                A custom-built, responsive blog platform with markdown support.
+                            </p>
+                            <span class="inline-block bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">Web Development</span>
+                            <a href="#" class="btn-animated block text-center bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md mt-2">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- NEW: Electronics Project (Fun) -->
+                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="electronics-fun">
+                        <img src="https://placehold.co/400x250/34d399/ffffff?text=Arduino+Robot" alt="Arduino Robot Project" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">DIY Line-Following Robot</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                An Arduino-based robot built for fun, demonstrating basic sensor integration and motor control.
+                            </p>
+                            <span class="inline-block bg-green-100 text-green-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">Electronics (Fun)</span>
+                            <a href="#" class="btn-animated block text-center bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md mt-2">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- NEW: Electronics Project (Work/Research) -->
+                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="electronics-work-research">
+                        <img src="https://placehold.co/400x250/fbbf24/ffffff?text=Power+Supply" alt="Power Supply Design Project" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">High-Efficiency DC-DC Converter</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Research project on optimizing power conversion efficiency for portable devices.
+                            </p>
+                            <span class="inline-block bg-yellow-100 text-yellow-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">Electronics (Work/Research)</span>
+                            <a href="#" class="btn-animated block text-center bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md mt-2">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- NEW: Internship Project -->
+                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="internship">
+                        <img src="https://placehold.co/400x250/ef4444/ffffff?text=Sensor+Network" alt="Internship Project Image" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">IoT Sensor Network Deployment</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Developed and deployed a wireless sensor network for environmental monitoring during my internship.
+                            </p>
+                            <span class="inline-block bg-red-100 text-red-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">Internship</span>
+                            <a href="#" class="btn-animated block text-center bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md mt-2">View Project</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 px-4 sm:px-6 lg:px-8 mt-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <p>&copy; 2025 MileVolt. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-3">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+                if (mobileMenuOverlay.classList.contains('open')) {
+                    mobileMenuOverlay.classList.remove('open');
+                    document.body.style.overflow = ''; // Restore scroll
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenuOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
+
+        closeMobileMenuButton.addEventListener('click', () => {
+            mobileMenuOverlay.classList.remove('open');
+            document.body.style.overflow = ''; // Restore scroll
+        });
+
+        // Project filtering logic
+        const categoryButtons = document.querySelectorAll('.project-category-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const selectedCategory = button.dataset.category;
+
+                // Remove active state from all buttons and add to the clicked one
+                categoryButtons.forEach(btn => btn.classList.remove('bg-blue-700', 'text-white', 'bg-green-700', 'text-white', 'bg-yellow-700', 'text-white', 'bg-red-700', 'text-white'));
+                // Add active class based on the button's own color (for new categories)
+                if (button.classList.contains('bg-blue-100')) {
+                    button.classList.add('bg-blue-700', 'text-white');
+                } else if (button.classList.contains('bg-green-100')) {
+                    button.classList.add('bg-green-700', 'text-white');
+                } else if (button.classList.contains('bg-yellow-100')) {
+                    button.classList.add('bg-yellow-700', 'text-white');
+                } else if (button.classList.contains('bg-red-100')) {
+                    button.classList.add('bg-red-700', 'text-white');
+                }
+
+
+                projectItems.forEach(item => {
+                    const itemCategories = item.dataset.categories.split(' '); // Split categories if multiple
+                    if (selectedCategory === 'all' || itemCategories.includes(selectedCategory)) {
+                        item.style.display = 'block'; // Show the item
+                        setTimeout(() => item.classList.remove('opacity-0', 'scale-95'), 10); // Animate in
+                        item.classList.add('transition-all', 'duration-300', 'ease-in-out', 'transform');
+                    } else {
+                        item.classList.add('opacity-0', 'scale-95'); // Animate out
+                        item.classList.remove('transition-all', 'duration-300', 'ease-in-out', 'transform');
+                        setTimeout(() => item.style.display = 'none', 300); // Hide after animation
+                    }
+                });
+            });
+        });
+
+        // Initialize with 'All' category active on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const allButton = document.querySelector('.project-category-btn[data-category="all"]');
+            if (allButton) {
+                allButton.click();
+            }
+        });
+    </script>
+</body>
+</html>
