@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MileVolt - Portfolio</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -81,7 +78,6 @@
 </head>
 <body class="min-h-screen flex flex-col">
 
-    <!-- Mobile Menu Overlay -->
     <div id="mobile-menu-overlay" class="mobile-menu-overlay lg:hidden">
         <button id="close-mobile-menu" class="absolute top-6 right-6 text-white text-3xl focus:outline-none">
             &times;
@@ -90,25 +86,23 @@
             <a href="#home" class="nav-item-animated text-white hover:text-blue-400 text-2xl font-medium">Home</a>
             <a href="#blog" class="nav-item-animated text-white hover:text-blue-400 text-2xl font-medium">Blog</a>
             <a href="#projects" class="nav-item-animated text-white hover:text-blue-400 text-2xl font-medium">Projects</a>
+            <a href="#internships-conferences" class="nav-item-animated text-white hover:text-blue-400 text-2xl font-medium">Experience</a>
             <a href="#contact" class="nav-item-animated text-white hover:text-blue-400 text-2xl font-medium">Contact</a>
         </nav>
     </div>
 
-    <!-- Header -->
     <header class="bg-white shadow-sm py-4 px-6 md:px-8 lg:px-12 sticky top-0 z-40">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <!-- Logo/Site Title -->
             <a href="#" class="text-2xl font-bold text-blue-700 hover:text-blue-900 transition-colors duration-200">MileVolt</a>
 
-            <!-- Desktop Navigation -->
             <nav class="hidden lg:flex space-x-8">
                 <a href="#home" class="nav-item-animated text-gray-700 hover:text-blue-600 font-medium">Home</a>
                 <a href="#blog" class="nav-item-animated text-gray-700 hover:text-blue-600 font-medium">Blog</a>
                 <a href="#projects" class="nav-item-animated text-gray-700 hover:text-blue-600 font-medium">Projects</a>
+                <a href="#internships-conferences" class="nav-item-animated text-gray-700 hover:text-blue-600 font-medium">Experience</a>
                 <a href="#contact" class="nav-item-animated text-gray-700 hover:text-blue-600 font-medium">Contact</a>
             </nav>
 
-            <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -117,16 +111,12 @@
         </div>
     </header>
 
-    <!-- Main Content Area -->
     <div class="flex flex-col lg:flex-row max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex-grow">
 
-        <!-- Left Sidebar: Picture & Quick Info -->
         <aside class="lg:w-1/4 lg:pr-8 mb-8 lg:mb-0">
             <div class="bg-white rounded-xl shadow-lg p-6 text-center lg:sticky lg:top-24">
-                <!-- Your Picture -->
-                <img src="https://raw.githubusercontent.com/ygarciaroc/milet.com/main/path/to/pfp_yamilet.jpg" class="w-36 h-36 rounded-full mx-auto mb-4 object-cover border-4 border-blue-200 shadow-md">
+                <img src="https://placehold.co/144x144/94a3b8/ffffff?text=YR" class="w-36 h-36 rounded-full mx-auto mb-4 object-cover border-4 border-blue-200 shadow-md">
 
-                <!-- Quick Info -->
                 <h2 class="text-2xl font-bold text-gray-800 mb-1">Yamilet Rocha</h2>
                 <p class="text-blue-600 font-medium mb-1">Electrical Engineering Undergraduate Student</p>
                 <p class="text-gray-500 text-sm mb-4">The University of Texas at El Paso (UTEP)</p>
@@ -134,17 +124,15 @@
                     Passionate about semiconductors, power integrity, and biomedical. I enjoy tackling challenging problems and bringing innovative electronic solutions to life.
                 </p>
 
-                <!-- Company/University Logos -->
                 <div class="mb-6">
                     <h3 class="text-lg font-semibold text-gray-700 mb-3">Affiliations & Experience</h3>
                     <div class="flex flex-wrap justify-center items-center gap-4">
-                        <img src="https://raw.githubusercontent.com/ygarciaroc/milet.com/mai/Siemens-Log.png" class="h-8 object-contain">
-                        <img src="https://raw.githubusercontent.com/ygarciaroc/milet.com/main/microsoft_logo.png" class="h-8 object-contain">
-                        <img src="raw.githubusercontent.com/ygarciaroc/milet.com/main/UTEP_Miners_wormark.svg.png" class="h-8 object-contain">
+                        <img src="https://placehold.co/80x32/14b8a6/ffffff?text=Siemens" class="h-8 object-contain">
+                        <img src="https://placehold.co/80x32/3b82f6/ffffff?text=Microsoft" class="h-8 object-contain">
+                        <img src="https://placehold.co/80x32/d946ef/ffffff?text=UTEP" class="h-8 object-contain">
                     </div>
                 </div>
 
-                <!-- CV and Social Media Buttons -->
                 <div class="flex flex-col space-y-3">
                     <a href="resume_yamilet_rocha_fall2025.pdf" download class="btn-animated bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md flex items-center justify-center">
                         <i class="fas fa-download mr-2"></i> Download CV
@@ -155,20 +143,16 @@
                     <a href="https://github.com//ygarciaroc" target="_blank" class="btn-animated bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-6 rounded-lg shadow-md flex items-center justify-center">
                         <i class="fab fa-github mr-2"></i> GitHub
                     </a>
-                    <!-- Add more social media buttons as needed -->
-                </div>
+                    </div>
             </div>
         </aside>
 
-        <!-- Right Content: Blog Posts & Projects -->
         <main class="lg:w-3/4 lg:pl-8">
-            <!-- Recent News/Blog Posts Section -->
             <section id="blog" class="bg-white rounded-xl shadow-lg p-6 mb-8">
                 <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-200 pb-3">Recent News & Blog Posts</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Blog Post 1 -->
                     <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
-                        <img src="https://unsplash.com/photos/black-mountain-under-white-sky-during-daytime-2pnozU26QBo" alt="Blog Post Image" class="w-full h-48 object-cover">
+                        <img src="https://placehold.co/400x250/cbd5e1/ffffff?text=Blog+Image+1" alt="Blog Post Image" class="w-full h-48 object-cover">
                         <div class="p-4">
                             <h3 class="text-xl font-semibold text-gray-800 mb-2">More Than a Resume: The Experiences That Built My Career - MileVolt</h3>
                             <p class="text-sm text-gray-500 mb-3">August 30, 2025</p>
@@ -178,9 +162,8 @@
                             <a href="#" class="btn-animated inline-block bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md">Read More</a>
                         </div>
                     </div>
-                    <!-- Blog Post 2 -->
                     <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
-                        <img src="https://unsplash.com/photos/a-large-body-of-water-under-a-cloudy-sky-G9i_plbfDgk" alt="Abstract corporate technology background" class="w-full h-48 object-cover">
+                        <img src="https://placehold.co/400x250/94a3b8/ffffff?text=Blog+Image+2" alt="Abstract corporate technology background" class="w-full h-48 object-cover">
                         <div class="p-4">
                             <h3 class="text-xl font-semibold text-gray-800 mb-2">From Siemens Ambassador to Microsoft Intern</h3>
                             <p class="text-sm text-gray-500 mb-3">August 30, 2025</p>
@@ -190,121 +173,133 @@
                             <a href="blog-post-2.html" class="btn-animated inline-block bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md">Read More</a>
                         </div>
                     </div>
-                    <!-- Add more blog posts as needed -->
-                </div>
+                    </div>
             </section>
 
-            <!-- Project Gallery Section -->
-            <section id="projects" class="bg-white rounded-xl shadow-lg p-6">
+            <section id="projects" class="portfolio-section bg-white rounded-xl shadow-lg p-6 mb-8">
                 <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-200 pb-3">My Projects</h2>
 
-                <!-- Project Categories -->
                 <div class="flex flex-wrap justify-center gap-3 mb-8">
                     <button class="project-category-btn btn-animated bg-blue-100 text-blue-700 hover:bg-blue-200 font-medium py-2 px-5 rounded-full text-sm" data-category="all">All</button>
-                    <button class="project-category-btn btn-animated bg-blue-100 text-blue-700 hover:bg-blue-200 font-medium py-2 px-5 rounded-full text-sm" data-category="web-dev">Web Development</button>
-                    <button class="project-category-btn btn-animated bg-blue-100 text-blue-700 hover:bg-blue-200 font-medium py-2 px-5 rounded-full text-sm" data-category="mobile-app">Mobile Apps</button>
-                    <button class="project-category-btn btn-animated bg-blue-100 text-blue-700 hover:bg-blue-200 font-medium py-2 px-5 rounded-full text-sm" data-category="design">UI/UX Design</button>
-                    <button class="project-category-btn btn-animated bg-green-100 text-green-700 hover:bg-green-200 font-medium py-2 px-5 rounded-full text-sm" data-category="electronics-fun">Electronics (Fun)</button>
-                    <button class="project-category-btn btn-animated bg-yellow-100 text-yellow-700 hover:bg-yellow-200 font-medium py-2 px-5 rounded-full text-sm" data-category="electronics-work-research">Electronics (Work/Research)</button>
-                    <button class="project-category-btn btn-animated bg-red-100 text-red-700 hover:bg-red-200 font-medium py-2 px-5 rounded-full text-sm" data-category="internship">Internship</button>
+                    <button class="project-category-btn btn-animated bg-blue-100 text-blue-700 hover:bg-blue-200 font-medium py-2 px-5 rounded-full text-sm" data-category="cad">CAD</button>
+                    <button class="project-category-btn btn-animated bg-blue-100 text-blue-700 hover:bg-blue-200 font-medium py-2 px-5 rounded-full text-sm" data-category="pcb">PCB</button>
+                    <button class="project-category-btn btn-animated bg-blue-100 text-blue-700 hover:bg-blue-200 font-medium py-2 px-5 rounded-full text-sm" data-category="programming">Programming</button>
+                    <button class="project-category-btn btn-animated bg-green-100 text-green-700 hover:bg-green-200 font-medium py-2 px-5 rounded-full text-sm" data-category="electronics">Electronics</button>
                 </div>
 
-                <!-- Project Grid -->
-                <div id="project-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Project 1 (Web Development - Existing) -->
-                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="web-dev">
-                        <img src="https://placehold.co/400x250/6366f1/ffffff?text=Project+1" alt="Project Image" class="w-full h-48 object-cover">
+                <div class="project-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="cad">
+                        <img src="https://placehold.co/400x250/6366f1/ffffff?text=CAD+Design" alt="CAD Project Image" class="w-full h-48 object-cover">
                         <div class="p-4">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">E-commerce Platform</h3>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">CAD Design</h3>
                             <p class="text-gray-600 text-sm mb-4">
-                                A full-stack e-commerce solution with secure payment gateway and admin panel.
+                                Practice design on Fusion 360 to showcase mastery of tools and shapes in simulation models.
                             </p>
-                            <span class="inline-block bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">Web Development</span>
+                            <span class="inline-block bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">Schematic/3D Models</span>
                             <a href="#" class="btn-animated block text-center bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md mt-2">View Project</a>
                         </div>
                     </div>
-                    <!-- Project 2 (Mobile App - Existing) -->
-                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="mobile-app">
-                        <img src="https://placehold.co/400x250/4f46e5/ffffff?text=Project+2" alt="Project Image" class="w-full h-48 object-cover">
+                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="pcb">
+                        <img src="https://placehold.co/400x250/4f46e5/ffffff?text=PCB+Design" alt="PCB Project Image" class="w-full h-48 object-cover">
                         <div class="p-4">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Task Management App</h3>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">PCBs</h3>
                             <p class="text-gray-600 text-sm mb-4">
-                                Intuitive mobile app to organize tasks, set reminders, and track progress.
+                                Created custom Printed Circuit Boards for various class projects, including power regulators and sensor interfaces.
                             </p>
-                            <span class="inline-block bg-purple-100 text-purple-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">Mobile App</span>
+                            <span class="inline-block bg-purple-100 text-purple-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">KiCAD</span>
                             <a href="#" class="btn-animated block text-center bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md mt-2">View Project</a>
                         </div>
                     </div>
-                    <!-- Project 3 (UI/UX Design - Existing) -->
-                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="design">
-                        <img src="https://placehold.co/400x250/6d28d9/ffffff?text=Project+3" alt="Project Image" class="w-full h-48 object-cover">
+                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="programming">
+                        <img src="https://placehold.co/400x250/6d28d9/ffffff?text=C%2B%2B+Program" alt="Programming Project Image" class="w-full h-48 object-cover">
                         <div class="p-4">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Dashboard Redesign</h3>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Automated Data Logging Script</h3>
                             <p class="text-gray-600 text-sm mb-4">
-                                Revamped a complex analytics dashboard for improved usability and aesthetics.
+                                Developed a C++ script to automate data acquisition from sensors, streamlining lab research and analysis.
                             </p>
-                            <span class="inline-block bg-pink-100 text-pink-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">UI/UX Design</span>
+                            <span class="inline-block bg-pink-100 text-pink-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">C++/Python</span>
                             <a href="#" class="btn-animated block text-center bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md mt-2">View Project</a>
                         </div>
                     </div>
-                    <!-- Project 4 (Web Development - Existing) -->
-                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="web-dev">
-                        <img src="https://placehold.co/400x250/4338ca/ffffff?text=Project+4" alt="Project Image" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Personal Blog Site</h3>
-                            <p class="text-gray-600 text-sm mb-4">
-                                A custom-built, responsive blog platform with markdown support.
-                            </p>
-                            <span class="inline-block bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">Web Development</span>
-                            <a href="#" class="btn-animated block text-center bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md mt-2">View Project</a>
-                        </div>
-                    </div>
-
-                    <!-- NEW: Electronics Project (Fun) -->
-                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="electronics-fun">
+                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="electronics">
                         <img src="https://placehold.co/400x250/34d399/ffffff?text=Arduino+Robot" alt="Arduino Robot Project" class="w-full h-48 object-cover">
                         <div class="p-4">
                             <h3 class="text-xl font-semibold text-gray-800 mb-2">DIY Line-Following Robot</h3>
                             <p class="text-gray-600 text-sm mb-4">
                                 An Arduino-based robot built for fun, demonstrating basic sensor integration and motor control.
                             </p>
-                            <span class="inline-block bg-green-100 text-green-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">Electronics (Fun)</span>
+                            <span class="inline-block bg-green-100 text-green-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">Electronics</span>
                             <a href="#" class="btn-animated block text-center bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md mt-2">View Project</a>
                         </div>
                     </div>
+                </div>
+            </section>
+            
+            <hr>
 
-                    <!-- NEW: Electronics Project (Work/Research) -->
-                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="electronics-work-research">
-                        <img src="https://placehold.co/400x250/fbbf24/ffffff?text=Power+Supply" alt="Power Supply Design Project" class="w-full h-48 object-cover">
+            <section id="internships-conferences" class="portfolio-section bg-white rounded-xl shadow-lg p-6">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-200 pb-3">Internships & Conferences</h2>
+
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                    <button class="project-category-btn btn-animated bg-blue-100 text-blue-700 hover:bg-blue-200 font-medium py-2 px-5 rounded-full text-sm" data-category="all">All</button>
+                    <button class="project-category-btn btn-animated bg-blue-100 text-blue-700 hover:bg-blue-200 font-medium py-2 px-5 rounded-full text-sm" data-category="internships">Internships</button>
+                    <button class="project-category-btn btn-animated bg-green-100 text-green-700 hover:bg-green-200 font-medium py-2 px-5 rounded-full text-sm" data-category="research">Research</button>
+                    <button class="project-category-btn btn-animated bg-purple-100 text-purple-700 hover:bg-purple-200 font-medium py-2 px-5 rounded-full text-sm" data-category="conferences">Conferences</button>
+                </div>
+
+                <div class="project-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="internships">
+                        <img src="https://placehold.co/400x250/ef4444/ffffff?text=Microsoft+Internship" alt="Internship Project Image" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Power Delivery on High-Speed Chip</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                My work as a Microsoft intern focused on optimizing power integrity and signal integrity for next-generation chips.
+                            </p>
+                            <span class="inline-block bg-red-100 text-red-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">Microsoft Internship</span>
+                            <a href="#" class="btn-animated block text-center bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md mt-2">View Experience</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="research">
+                        <img src="https://placehold.co/400x250/fbbf24/ffffff?text=Research+Project" alt="Research Project Image" class="w-full h-48 object-cover">
                         <div class="p-4">
                             <h3 class="text-xl font-semibold text-gray-800 mb-2">High-Efficiency DC-DC Converter</h3>
                             <p class="text-gray-600 text-sm mb-4">
-                                Research project on optimizing power conversion efficiency for portable devices.
+                                A research project on optimizing power conversion efficiency for portable devices, contributing to my university's lab.
                             </p>
-                            <span class="inline-block bg-yellow-100 text-yellow-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">Electronics (Work/Research)</span>
+                            <span class="inline-block bg-yellow-100 text-yellow-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">Research/Work</span>
                             <a href="#" class="btn-animated block text-center bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md mt-2">View Project</a>
                         </div>
                     </div>
-
-                    <!-- NEW: Internship Project -->
-                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="internship">
-                        <img src="https://placehold.co/400x250/ef4444/ffffff?text=Sensor+Network" alt="Internship Project Image" class="w-full h-48 object-cover">
+                    
+                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="conferences">
+                        <img src="https://placehold.co/400x250/a855f7/ffffff?text=Conference+Talk" alt="Conference Talk Image" class="w-full h-48 object-cover">
                         <div class="p-4">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">IoT Sensor Network Deployment</h3>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Presented at IEEE Region 5 Conference</h3>
                             <p class="text-gray-600 text-sm mb-4">
-                                Developed and deployed a wireless sensor network for environmental monitoring during my internship.
+                                Presented my research on low-power digital design at a prestigious IEEE conference, gaining valuable public speaking experience.
                             </p>
-                            <span class="inline-block bg-red-100 text-red-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">Internship</span>
-                            <a href="#" class="btn-animated block text-center bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md mt-2">View Project</a>
+                            <span class="inline-block bg-purple-100 text-purple-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">Conference</span>
+                            <a href="#" class="btn-animated block text-center bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md mt-2">View Presentation</a>
                         </div>
                     </div>
-
+                    
+                    <div class="project-item bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200" data-categories="internships">
+                        <img src="https://placehold.co/400x250/10b981/ffffff?text=Siemens+Experience" alt="Siemens Experience Image" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Siemens Digital Industries Ambassador</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                As a campus ambassador, I helped promote Siemens software and technology to students, bridging academia and industry.
+                            </p>
+                            <span class="inline-block bg-green-100 text-green-700 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">Ambassador</span>
+                            <a href="#" class="btn-animated block text-center bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md mt-2">Learn More</a>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
     </div>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6 px-4 sm:px-6 lg:px-8 mt-8">
         <div class="max-w-7xl mx-auto text-center">
             <p>&copy; 2025 MileVolt. All rights reserved.</p>
@@ -347,50 +342,57 @@
             document.body.style.overflow = ''; // Restore scroll
         });
 
-        // Project filtering logic
-        const categoryButtons = document.querySelectorAll('.project-category-btn');
-        const projectItems = document.querySelectorAll('.project-item');
+        // Refactored Project Filtering Logic to work for multiple sections
+        document.querySelectorAll('.portfolio-section').forEach(section => {
+            const categoryButtons = section.querySelectorAll('.project-category-btn');
+            const projectItems = section.querySelectorAll('.project-item');
 
-        categoryButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const selectedCategory = button.dataset.category;
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const selectedCategory = button.dataset.category;
 
-                // Remove active state from all buttons and add to the clicked one
-                categoryButtons.forEach(btn => btn.classList.remove('bg-blue-700', 'text-white', 'bg-green-700', 'text-white', 'bg-yellow-700', 'text-white', 'bg-red-700', 'text-white'));
-                // Add active class based on the button's own color (for new categories)
-                if (button.classList.contains('bg-blue-100')) {
-                    button.classList.add('bg-blue-700', 'text-white');
-                } else if (button.classList.contains('bg-green-100')) {
-                    button.classList.add('bg-green-700', 'text-white');
-                } else if (button.classList.contains('bg-yellow-100')) {
-                    button.classList.add('bg-yellow-700', 'text-white');
-                } else if (button.classList.contains('bg-red-100')) {
-                    button.classList.add('bg-red-700', 'text-white');
-                }
+                    // Remove active state from all buttons in this section
+                    categoryButtons.forEach(btn => {
+                        btn.classList.remove('bg-blue-700', 'text-white', 'bg-green-700', 'text-white', 'bg-purple-700', 'text-white', 'bg-yellow-700', 'text-white', 'bg-red-700', 'text-white');
+                        const baseColor = btn.dataset.category === 'internships' ? 'blue' :
+                            btn.dataset.category === 'research' ? 'green' :
+                            btn.dataset.category === 'conferences' ? 'purple' : 'blue';
+                        btn.classList.add(`bg-${baseColor}-100`, `text-${baseColor}-700`);
+                    });
 
+                    // Add active state to the clicked button
+                    const activeColor = button.dataset.category === 'internships' ? 'blue' :
+                        button.dataset.category === 'research' ? 'green' :
+                        button.dataset.category === 'conferences' ? 'purple' : 'blue';
+                    button.classList.add(`bg-${activeColor}-700`, 'text-white');
+                    button.classList.remove(`bg-${activeColor}-100`, `text-${activeColor}-700`);
 
-                projectItems.forEach(item => {
-                    const itemCategories = item.dataset.categories.split(' '); // Split categories if multiple
-                    if (selectedCategory === 'all' || itemCategories.includes(selectedCategory)) {
-                        item.style.display = 'block'; // Show the item
-                        setTimeout(() => item.classList.remove('opacity-0', 'scale-95'), 10); // Animate in
-                        item.classList.add('transition-all', 'duration-300', 'ease-in-out', 'transform');
-                    } else {
-                        item.classList.add('opacity-0', 'scale-95'); // Animate out
-                        item.classList.remove('transition-all', 'duration-300', 'ease-in-out', 'transform');
-                        setTimeout(() => item.style.display = 'none', 300); // Hide after animation
-                    }
+                    projectItems.forEach(item => {
+                        const itemCategories = item.dataset.categories.split(' ');
+                        const isMatch = selectedCategory === 'all' || itemCategories.includes(selectedCategory);
+
+                        if (isMatch) {
+                            item.style.display = 'block'; // Show the item
+                            setTimeout(() => item.classList.remove('opacity-0', 'scale-95'), 10);
+                            item.classList.add('transition-all', 'duration-300', 'ease-in-out', 'transform');
+                        } else {
+                            item.classList.add('opacity-0', 'scale-95');
+                            item.classList.remove('transition-all', 'duration-300', 'ease-in-out', 'transform');
+                            setTimeout(() => item.style.display = 'none', 300);
+                        }
+                    });
                 });
+            });
+
+            // Initialize with 'All' category active on load for each section
+            document.addEventListener('DOMContentLoaded', () => {
+                const allButton = section.querySelector('.project-category-btn[data-category="all"]');
+                if (allButton) {
+                    allButton.click();
+                }
             });
         });
 
-        // Initialize with 'All' category active on load
-        document.addEventListener('DOMContentLoaded', () => {
-            const allButton = document.querySelector('.project-category-btn[data-category="all"]');
-            if (allButton) {
-                allButton.click();
-            }
-        });
     </script>
 </body>
 </html>
